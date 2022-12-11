@@ -611,7 +611,7 @@ class AP2Handler(http.server.BaseHTTPRequestHandler):
                         self.logger.debug(s.getSummaryMessage())
 
                         if s.getStreamType() == Stream.BUFFERED:
-                            set_volume_pid(s.getControlProc().pid)
+                            set_volume_pid(s.getDataProc().pid)
                         if s.getStreamType() == Stream.REALTIME:
                             set_volume_pid(s.getControlProc().pid)
 
